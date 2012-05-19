@@ -88,5 +88,20 @@ In reality, you would normally do something like this:
     cd /some/path
     bash run.sh start
 
-I haven't had time to add the standard 'run.sh' yet, so it'll break if you try it.
+I have now added an:
+
+* example app.properties which sets some runtime properties.
+* example app.jars file
+
+The app.jars references your .m2 folder. This is sub-optimal.
+In reality, and will be shown in the samples, the entire settings are self-generated from the runtime classpath.
+To test it, cd to the src/test/runtime folder and do this:
+
+    cd src/test/runtime
+    bash com.alltamasystems.ejr start
+
+Since it is running in dev mode, you get console debug.
+If you choose prod mode you get logs files instead.
+
+
 
