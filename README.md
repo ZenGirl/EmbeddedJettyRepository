@@ -64,11 +64,20 @@ Part of the advantage of using java on the cmd line is that you can easily see w
 
 Which will easily show what's running and what it's listening on.
 
+# Warning
+
+This is pre-alpha.
+I wrote it using maven but would rather have used gradle.
+It's not completely functional yet and barely commented as I wrote in one giant session.
+I'll be adding stuff gradually over the next few days to get it to a completely usable system.
+I'll also be adding sample applications.
+
+I also have to add JRuby-Rack capability so it can run rails/sinatra apps.
+Stayed tuned.
+
 # Usage
 
 Just clone it.
-I wrote it using maven but would rather have used gradle.
-It's not completely functional yet and barely commented as I wrote in one giant session.
 
 To show the tests work, simply do:
 
