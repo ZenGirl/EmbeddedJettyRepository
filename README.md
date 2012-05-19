@@ -66,7 +66,18 @@ Which will easily show what's running and what it's listening on.
 
 # Usage
 
+Just clone it.
+I wrote it using maven but would rather have used gradle.
+It's not completely functional yet and barely commented as I wrote in one giant session.
+
+To show the tests work, simply do:
+
+    mvn clean test
+
+In reality, you would normally do something like this:
+
     cd /some/path
     bash run.sh start
 
+I haven't had time to add the standard 'run.sh' yet, so it'll break if you try it.
 
