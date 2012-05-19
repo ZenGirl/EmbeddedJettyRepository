@@ -109,7 +109,7 @@ public class EJettyRunner {
       connector.setHost(ipAddress);
       server.addConnector(connector);
 
-      String requestLogName = "logs/request.yyyy_mm_dd.log";
+      String requestLogName = runtimeFolder + "/logs/request.yyyy_mm_dd.log";
       log.warn("JETTY: Configuring request logging to " + requestLogName + " retention 7 days");
       f = new File("logs");
       if (!f.exists()) {
