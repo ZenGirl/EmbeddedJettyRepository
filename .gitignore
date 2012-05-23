@@ -1,0 +1,9 @@
+# Ignore bleeding mac files
+.DS_Store
+
+# Ignore IntelliJ files.
+*.iml
+.idea
+
+# Ignore maven generated files
+target/**
