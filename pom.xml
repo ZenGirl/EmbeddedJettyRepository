@@ -113,11 +113,23 @@
     </testResources>
 
     <plugins>
+
+      <!--
+        Was experimenting with mvn jettty:run
+        TODO: Figure out why this doesn't work.
+      -->
       <plugin>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
         <version>2.5</version>
       </plugin>
+
+      <!--
+       Attempt to force maven to run in the test folder.
+       It didn't work.
+       I had to set the runtimeFolder option in the AppTest code.
+       TODO: Figure out why this doesn't work.
+      -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -128,6 +140,10 @@
           </additionalClasspathElements>
         </configuration>
       </plugin>
+
+      <!--
+        TODO: Why did I add this?
+      -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -137,7 +153,27 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+
+      <!--
+       This is purely provided to illustrate a way to gather all dependencies into a folder
+      -->
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.basedir}/src/test/runtime/lib</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
+
   </build>
 
 </project>

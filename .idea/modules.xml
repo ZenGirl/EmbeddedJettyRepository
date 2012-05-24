@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EmbeddedJettyRunner.iml" filepath="$PROJECT_DIR$/EmbeddedJettyRunner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/src/maven/com.alltamasystems.ejr.maven.simpleHandler/com.alltamasystems.ejr.maven.simpleHandler.iml" filepath="$PROJECT_DIR$/samples/src/maven/com.alltamasystems.ejr.maven.simpleHandler/com.alltamasystems.ejr.maven.simpleHandler.iml" />
     </modules>
   </component>
 </project>

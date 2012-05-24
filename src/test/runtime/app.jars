@@ -2,6 +2,13 @@
 # This is purely an example.
 # Use the supplied mkAppJars.sh program or use gradle runtimeEnv to create
 # a real one.
+#
+# Alternatively see the src/samples/maven examples for a way to create a
+# runtime lib folder for building the classpath
+#
+# The runtime folder here has a lib folder generated using the 'maven' way.
+# See the last plugin in the pom.xml.
+#
 # ---------------------------------------------------------------------------
 /Users/kim/.m2/repository/org/slf4j/slf4j-api/1.6.2/slf4j-api-1.6.2.jar
 /Users/kim/.m2/repository/org/slf4j/slf4j-log4j12/1.6.2/slf4j-log4j12-1.6.2.jar

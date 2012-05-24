@@ -40,12 +40,14 @@ echo "-> RUN_ENV is ${RUN_ENV}"
 # Set the runtime folder based on environment
 # Note that the runtime folder in development is dependent on your build
 # system.
-# For maven this is ../../../target/classes
+# For maven this is ../../../target/classes or ../../target/${APP_NAME}.jar
 # For Gradle this is ../../../build/libs/${APP_NAME}.jar
 # ---------------------------------------------------------------------------
 echo "Determining build system..."
 DEV_CLASSPATH="../../../target/classes"
 [ -f "../../../build/libs/${APP_NAME}.jar" ] && DEV_CLASSPATH="../../../build/libs/${APP_NAME}.jar"
+[ -f "../../../target/${APP_NAME}.jar" ] && DEV_CLASSPATH="../../../target/${APP_NAME}.jar"
+
 echo "-> DEV_CLASSPATH is ${DEV_CLASSPATH}"
 
 # ---------------------------------------------------------------------------
@@ -89,7 +91,7 @@ echo "-> runtimeFolder ${runtimeFolder}"
 # ---------------------------------------------------------------------------
 # Build the class path based on the environment
 # ---------------------------------------------------------------------------
-echo "Building CLASSPATH"
+CLASSPATH=$DEV_CLASSPATH
 if [ -d "${RUN_FOLDER}/lib" ]; then
   for jar in ${RUN_FOLDER}/lib/*.jar ; do
     CLASSPATH="$CLASSPATH:$jar"

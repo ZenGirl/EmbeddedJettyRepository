@@ -112,7 +112,6 @@ public class AppTest {
   }
 
   @Test
-  @Ignore
   public void testPublicXHTML() {
     System.out.println("--> TEST: Public returns x.html");
     ClientResponse response = null;
@@ -132,7 +131,6 @@ public class AppTest {
   }
 
   @Test
-  @Ignore
   public void testEjrStatus() {
     System.out.println("--> TEST: EJR Status returns correctly");
     ClientResponse response = null;
@@ -163,7 +161,6 @@ public class AppTest {
   }
 
   @Test
-  @Ignore
   public void testEjrRoutes() {
     System.out.println("--> TEST: EJR Routes returns correctly");
     ClientResponse response = null;
@@ -250,7 +247,6 @@ Server State
   }
 
   @Test
-  @Ignore
   public void testPublicXTXT() {
     System.out.println("--> TEST: Public returns x.txt");
     ClientResponse response = null;
@@ -269,7 +265,6 @@ Server State
   }
 
   @Test
-  @Ignore
   public void testPublicNotFound() {
     System.out.println("--> TEST: Public does not return z.txt");
     ClientResponse response = null;
@@ -286,7 +281,6 @@ Server State
   }
 
   @Test
-  @Ignore
   public void testHandler1WithTrailingSlash() {
     System.out.println("--> TEST: Handler1 with trailing slash returns correct response");
     ClientResponse response = null;
@@ -311,7 +305,6 @@ Server State
   }
 
   @Test
-  @Ignore
   public void testHandler1WithoutTrailingSlash() {
     System.out.println("--> TEST: Handler1 without trailing slash returns correct response");
     ClientResponse response = null;
@@ -333,7 +326,6 @@ Server State
   }
 
   @Test
-  @Ignore
   public void testHandler2WithTrailingSlash() {
     System.out.println("--> TEST: Handler2 with trailing slash returns correct 200");
     ClientResponse response = null;
@@ -349,7 +341,6 @@ Server State
   }
 
   @Test
-  @Ignore
   public void testHandler2WithoutTrailingSlash() {
     System.out.println("--> TEST: Handler2 without trailing slash returns correct 302");
     ClientResponse response = null;
@@ -380,7 +371,7 @@ Server State
   // ------------------------------------------------------------------------
   // SERVLET1
   // ------------------------------------------------------------------------
-  @Test @Ignore
+  @Test
   public void testServlet1WithTrailingSlashWithoutRedirects() {
     System.out.println("--> TEST: Servlet1 with trailing slash and no redirects returns correct 404");
     ClientResponse response = null;
@@ -396,7 +387,7 @@ Server State
     System.out.println("    WORKED!");
   }
 
-  @Test @Ignore
+  @Test
   public void testServlet1WithTrailingSlashWithRedirects() {
     System.out.println("--> TEST: Servlet1 with trailing slash with redirects returns correct 404");
     ClientResponse response = null;
@@ -412,7 +403,7 @@ Server State
     System.out.println("    WORKED!");
   }
 
-  @Test @Ignore
+  @Test
   public void testServlet1WithoutTrailingSlashWithoutRedirects() {
     System.out.println("--> TEST: Servlet1 without trailing slash without redirects returns correct 200");
     ClientResponse response = null;
@@ -428,7 +419,7 @@ Server State
     System.out.println("    WORKED!");
   }
 
-  @Test @Ignore
+  @Test
   public void testServlet1WithoutTrailingSlashWithRedirects() {
     System.out.println("--> TEST: Servlet1 without trailing slash with redirects returns correct 200");
     ClientResponse response = null;
@@ -450,7 +441,7 @@ Server State
   // ------------------------------------------------------------------------
   // SERVLET2
   // ------------------------------------------------------------------------
-  @Test @Ignore
+  @Test
   public void testServlet2WithTrailingSlashWithoutRedirects() {
     System.out.println("--> TEST: Servlet2 with trailing slash and no redirects returns correct 404");
     ClientResponse response = null;
@@ -466,7 +457,7 @@ Server State
     System.out.println("    WORKED!");
   }
 
-  @Test @Ignore
+  @Test
   public void testServlet2WithTrailingSlashWithRedirects() {
     System.out.println("--> TEST: Servlet2 with trailing slash with redirects returns correct 404");
     ClientResponse response = null;
@@ -482,7 +473,7 @@ Server State
     System.out.println("    WORKED!");
   }
 
-  @Test @Ignore
+  @Test
   public void testServlet2WithoutTrailingSlashWithoutRedirects() {
     System.out.println("--> TEST: Servlet2 without trailing slash without redirects returns correct 200");
     ClientResponse response = null;
@@ -498,7 +489,7 @@ Server State
     System.out.println("    WORKED!");
   }
 
-  @Test @Ignore
+  @Test
   public void testServlet2WithoutTrailingSlashWithRedirects() {
     System.out.println("--> TEST: Servlet2 without trailing slash with redirects returns correct 200");
     ClientResponse response = null;
@@ -522,7 +513,7 @@ Server State
   // ------------------------------------------------------------------------
   // JERSEY1
   // ------------------------------------------------------------------------
-  @Test @Ignore
+  @Test
   public void testJersey1() {
     System.out.println("--> TEST: Jersey1 returns correct 200 and body");
     ClientResponse response = null;
@@ -544,7 +535,7 @@ Server State
   // ------------------------------------------------------------------------
   // JERSEY2
   // ------------------------------------------------------------------------
-  @Test @Ignore
+  @Test
   public void testJersey2() {
     System.out.println("--> TEST: Jersey2 returns correct 200 and body");
     ClientResponse response = null;

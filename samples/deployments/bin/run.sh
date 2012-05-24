@@ -89,18 +89,11 @@ echo "-> runtimeFolder ${runtimeFolder}"
 # ---------------------------------------------------------------------------
 # Build the class path based on the environment
 # ---------------------------------------------------------------------------
-echo "Building CLASSPATH"
-if [ -d "${RUN_FOLDER}/lib" ]; then
-  for jar in ${RUN_FOLDER}/lib/*.jar ; do
-    CLASSPATH="$CLASSPATH:$jar"
-  done
-else
-  APP_JARS="${RUN_FOLDER}/app.jars"
-  [ ! -f "$APP_JARS" ] && echo "Missing app.jars file. Unable to build classpath" && usage
-  while read line; do
-    CLASSPATH="$CLASSPATH:$line"
-  done < <(egrep -v '^#|^$' "${RUN_FOLDER}/app.jars")
-fi
+APP_JARS="${RUN_FOLDER}/app.jars"
+[ ! -f "$APP_JARS" ] && echo "Missing app.jars file. Unable to build classpath" && usage
+while read line; do
+  CLASSPATH="$CLASSPATH:$line"
+done < <(egrep -v '^#|^$' "${RUN_FOLDER}/app.jars")
 echo "-> Derived CLASSPATH=[$CLASSPATH]"
 
 # ---------------------------------------------------------------------------
